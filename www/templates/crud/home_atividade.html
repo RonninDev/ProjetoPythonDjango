@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Lista de Atividades</h1>
+    <a href="{% url 'atividade_add' %}">CRIAR NOVA ATIVIDADE</a>
+    <hr>
+    <!-- O que determina o nome desta object_list? -->
+    {% for atividade in object_list %}
+    <li>{{ atividade.titulo }} - <a href="{% url 'atividade_att' atividade.id %}">atualizar</a>
+        <a href="{% url 'atividade_ver' atividade.id %}">visualizar</a>
+        <a href="{% url 'atividade_del' atividade.id %}">deletar</a>
+    </li>
+    </br>
+    {% endfor %}
+</body>
+</html>

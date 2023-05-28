@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Atividade</title>
+</head>
+<body>
+  <h1>Cadastre uma Atividade</h1>
+  <div>
+    <form method="POST">
+        {% csrf_token %}
+<!--          <label for="">{{ atividade.titulo }}</label>-->
+<!--          {{ atividade.titulo }}-->
+<!--          <label for="">{{ atividade.descricao }}</label>-->
+<!--          {{ atividade.descricao }}-->
+          {{ form.as_p }}
+          <button type="submit">Salvar</button>
+    </form>
+    <br>
+    <a href="{% url 'home_atividade' %}">Voltar</a>
+  </div>
+</body>
+</html>

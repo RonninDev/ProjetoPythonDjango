@@ -1,0 +1,11 @@
+# Diretórios
+bin/
+include/
+lib/
+lib64/
+
+# Arquivos
+db.sqlite3
+pyvenv.cfg
+README.md
+requirements.txt
